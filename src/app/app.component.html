@@ -1,0 +1,8 @@
+<!--  -->
+<div *ngIf="flag==0 ; else theday">
+    <app-inadvance></app-inadvance>    
+</div>
+
+<ng-template #theday>
+    <app-theday></app-theday>
+</ng-template>
