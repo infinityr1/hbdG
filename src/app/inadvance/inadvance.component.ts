@@ -11,7 +11,7 @@ export class InadvanceComponent implements OnInit {
   flag = true;
 
   ngOnInit() {
-    this.playAudio()    
+    //this.playAudio()    
  }
 
 

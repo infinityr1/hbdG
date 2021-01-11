@@ -10,7 +10,7 @@ export class ThedayComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.playAudio();
+   // this.playAudio();
   }
 
   playAudio(){
