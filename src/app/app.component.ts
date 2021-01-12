@@ -46,7 +46,28 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.subscription = interval(100)
       .subscribe(x => { this.getTimeDifference(); });
+
+      if(this.flag == 0){
+        this.playAudio;
+      }
+      if(this.flag == 1){
+        this.playAudioh;
+      }
   }
+
+  playAudio(){
+    let audio = new Audio();
+    audio.src = "./assets/v2.mp3";
+    audio.load();
+    audio.play();    
+    }
+
+    playAudioh(){
+      let audio = new Audio();
+      audio.src = "./assets/h1.mp3";
+      audio.load();
+      audio.play();  
+      }
 
 
   ngOnDestroy() {
