@@ -11,13 +11,13 @@ export class InadvanceComponent implements OnInit {
   flag = true;
 
   ngOnInit() {
-    //this.playAudio()    
+    this.playAudio()    
  }
 
 
   playAudio(){
     let audio = new Audio();
-    audio.src = "../assets/v2.mp3";
+    audio.src = "./assets/v2.mp3";
     audio.load();
     audio.play();    
     }
