@@ -44,15 +44,16 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
+    if(this.flag == 0){
+      this.playAudio;
+    }
+    if(this.flag == 1){
+      this.playAudioh;
+    }
     this.subscription = interval(100)
       .subscribe(x => { this.getTimeDifference(); });
 
-      if(this.flag == 0){
-        this.playAudio;
-      }
-      if(this.flag == 1){
-        this.playAudioh;
-      }
+      
   }
 
   playAudio(){
