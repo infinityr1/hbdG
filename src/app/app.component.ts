@@ -42,35 +42,11 @@ export class AppComponent implements OnInit {
   this.timeDifference = this.dDay.getTime() - new Date().getTime();
   }
 
-
   ngOnInit() {
-    if(this.flag == 0){
-      this.playAudio;
-    }
-    if(this.flag == 1){
-      this.playAudioh;
-    }
     this.subscription = interval(100)
-      .subscribe(x => { this.getTimeDifference(); });
-
-      
+      .subscribe(x => { this.getTimeDifference();});  
   }
-
-  playAudio(){
-    let audio = new Audio();
-    audio.src = "./assets/v2.mp3";
-    audio.load();
-    audio.play();    
-    }
-
-    playAudioh(){
-      let audio = new Audio();
-      audio.src = "./assets/h1.mp3";
-      audio.load();
-      audio.play();  
-      }
-
-
+  
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
